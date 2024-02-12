@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(logger("dev"));
+//app.use(logger("dev"));
 app.set("secretKey", "nodeRestApi");
 
 app.use("/animals", animalRouter);
