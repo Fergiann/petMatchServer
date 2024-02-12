@@ -11,28 +11,28 @@
 // Sexo
 // Tamaño
 
-const { SchemaTypes } = require("mongoose");
+const mongoose= require("mongoose");
 
-const mongoose = new mongoose.Schema({
-  nombre: { type: string, required: true, trim: true },
+const animalSchema = new mongoose.Schema({
+  nombre: { type: String, required: true, trim: true },
 
-  imagen: { type: string, required: true, trim: true },
+  imagen: { type: String, required: true, trim: true },
 
-  personalidad: { type: array, required: true, trim: true },
+  personalidad: { type: Array, required: true, trim: true },
 
-  peso: { type: number, required: true, trim: true },
+  peso: { type: Number, required: true, trim: true },
 
-  nacimiento: { type: string, required: true, trim: true },
+  nacimiento: { type: String, required: true, trim: true },
 
-  historia: { type: string, required: true, trim: true },
+  historia: { type: String, required: true, trim: true },
 
-  ciudad: { type: string, required: true, trim: true },
+  ciudad: { type: String, required: true, trim: true },
 
-  especie: { type: string, required: true, trim: true },
+  especie: { type: String, required: true, trim: true },
 
-  raza: { type: string, required: false, trim: true },
+  raza: { type: String, required: false, trim: true },
 
-  sexo: { type: string, required: false, trim: true },
+  sexo: { type: String, required: false, trim: true },
 },
 {timeStamps:true}
 )
