@@ -6,9 +6,9 @@ const { isAuth } = require("../middlewares/auth.middleware");
 
 animalRouter.get("/", getAnimals );
 animalRouter.get("/:id", getAnimal );
-animalRouter.post("/", [isAuth], createAnimal);
+animalRouter.post("/",  createAnimal);
 animalRouter.patch("/:id", updateAnimal);
-animalRouter.delete("/:id", [isAuth], deleteAnimal);
+animalRouter.delete("/:id",  deleteAnimal);
 
 module.exports = animalRouter;
 
