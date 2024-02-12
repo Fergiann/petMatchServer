@@ -41,5 +41,3 @@ const Animals = mongoose.model('Animals', animalSchema)
 
 module.exports=Animals;
 
-
-
