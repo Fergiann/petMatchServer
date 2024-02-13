@@ -13,7 +13,7 @@ const corsOptions = {
 require("dotenv").config();
 
 const animalRouter = require("./src/routes/animals.routes");
-
+const noticiasRouter = require("./src/routes/noticias.routes")
 connectMongo();
 
 const app = express();
@@ -39,6 +39,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set("secretKey", "nodeRestApi");
 
 app.use("/animals", animalRouter);
+app.use("/noticias", noticiasRouter);
 
 app.get("/", (request, response) => {
   response.status(200).json({
