@@ -1,8 +1,20 @@
 const express = require("express");
 
+const mongoSanitize = require('express-mongo-sanitize');
+
+const HTTPSTATUSCODE = require('./utils/httpStatusCode');
+const connectMongo = require("./utils/db");
+
 require("dotenv").config();
 
+const animalRouter = require("./src/routes/animals.routes");
+
+connectMongo();
+
 const app = express();
+
+app.use(express.json());
+app.use(mongoSanitize());
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Methods", "GET,PATCH,POST,DELETE");
@@ -13,6 +25,10 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+//app.use(logger("dev"));
+app.set("secretKey", "nodeRestApi");
+
+app.use("/animals", animalRouter);
 
 app.get("/", (request, response) => {
   response.status(200).json({
@@ -44,3 +60,5 @@ app.use((error, request, response, next) => {
 app.listen(process.env.PORT, () => {
   console.log("app running in port ${process.env.PORT}");
 });
+
+// hola
