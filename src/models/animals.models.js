@@ -39,6 +39,18 @@ const animalSchema = new mongoose.Schema({
   raza: { type: String, required: false, trim: true },
 
   sexo: { type: String, required: false, trim: true },
+
+  vacunado: { type: Boolean, required: false, trim: true },
+
+  desparasitado: { type: Boolean, required: false, trim: true },
+
+  sano: { type: Boolean, required: false, trim: true },
+
+  esterilizado: { type: Boolean, required: false, trim: true },
+
+  microchip: { type: Boolean, required: false, trim: true },
+
+  adoptado: { type: Boolean, required: false, trim: true },
 },
 {timeStamps:true}
 )

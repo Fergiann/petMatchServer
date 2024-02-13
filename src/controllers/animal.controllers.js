@@ -4,8 +4,10 @@ const HTTPSTATUSCODE = require("../../utils/httpStatusCode");
 // get all
 const getAnimals = async (request, response) => {
     try {
+        console.log(response)
         const animals = await Animals.find();
         response.status(200).json(animals);
+        
  
     } catch (error) {
         console.log(error.message);
