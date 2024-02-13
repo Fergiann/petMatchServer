@@ -1,4 +1,4 @@
-const Animals = require('../models/animals.model');
+const Animals = require('../models/animals.models');
 const HTTPSTATUSCODE = require("../../utils/httpStatusCode");
  
 // get all

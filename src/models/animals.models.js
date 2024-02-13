@@ -10,6 +10,12 @@
 // Edad
 // Sexo
 // Tamaño
+//Vacunado
+// Desparasitado
+// Sano
+// Esterilizado
+
+// Microchip
 
 const mongoose= require("mongoose");
 
