@@ -1,9 +1,14 @@
 const express = require("express");
 
+const cors = require("cors");
+
 const mongoSanitize = require('express-mongo-sanitize');
 
 const HTTPSTATUSCODE = require('./utils/httpStatusCode');
 const connectMongo = require("./utils/db");
+const corsOptions = {
+  origin: 'http://127.0.0.1:5500',
+};
 
 require("dotenv").config();
 
@@ -15,13 +20,18 @@ const app = express();
 
 app.use(express.json());
 app.use(mongoSanitize());
-
+app.use(cors(corsOptions));
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Methods", "GET,PATCH,POST,DELETE");
   res.header("Access-Control-Allow-Credentials", true);
   res.header("Access-Control-Allow-Headers", "Content-Type");
   next();
 });
+
+app.use(cors({
+  origin: ['http://localhost:3300', 'http://localhost:4200'],
+  credentials: true,
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
