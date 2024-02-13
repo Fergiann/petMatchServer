@@ -12,7 +12,8 @@
         "ciudad": "Madrid",
         "especie": "Escorpión",
         "raza": "Negro",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "sano": "Sí"
     },
     {
         "nombre": "Aranea",
@@ -24,7 +25,8 @@
         "ciudad": "Barcelona",
         "especie": "Araña",
         "raza": "Lobo",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "sano": "Sí"
     },
     {
         "nombre": "Venom",
@@ -36,7 +38,8 @@
         "ciudad": "Valencia",
         "especie": "Tarántula",
         "raza": "Gigante",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "sano": "Sí"
     },
     {
         "nombre": "Silk",
@@ -48,7 +51,8 @@
         "ciudad": "Sevilla",
         "especie": "Araña",
         "raza": "De Seda",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "sano": "Sí"
     },
     {
         "nombre": "Fang",
@@ -60,7 +64,8 @@
         "ciudad": "Granada",
         "especie": "Araña",
         "raza": "De Rincón",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "sano": "Sí"
     },
     {
         "nombre": "Venom",
@@ -72,7 +77,8 @@
         "ciudad": "Barcelona",
         "especie": "Araña",
         "raza": "Viuda Negra",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "sano": "Sí"
     },
     {
         "nombre": "Arachne",
@@ -84,7 +90,9 @@
         "ciudad": "Valencia",
         "especie": "Araña",
         "raza": "Tejedora",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "sano": "Sí"
+        
     },
     {
         "nombre": "Nyx",
@@ -96,7 +104,8 @@
         "ciudad": "Sevilla",
         "especie": "Araña",
         "raza": "Lobo",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "sano": "Sí"
     },
 
 
@@ -111,7 +120,12 @@
         "ciudad": "Madrid",
         "especie": "Conejo",
         "raza": "Enano",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
     {
         "nombre": "Luna",
@@ -123,7 +137,12 @@
         "ciudad": "Barcelona",
         "especie": "Conejo",
         "raza": "Enano",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
     {
         "nombre": "Floppy",
@@ -135,7 +154,12 @@
         "ciudad": "Valencia",
         "especie": "Conejo",
         "raza": "Bélier",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "Si",
+        "microchip": "Sí"
     },
     {
         "nombre": "Coco",
@@ -147,7 +171,12 @@
         "ciudad": "Sevilla",
         "especie": "Conejo",
         "raza": "Holandés",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "No",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
     {
         "nombre": "Bella",
@@ -159,7 +188,12 @@
         "ciudad": "Granada",
         "especie": "Conejo",
         "raza": "Mini Lop",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "Si",
+        "microchip": "Sí"
     },
     {
         "nombre": "Oreo",
@@ -171,7 +205,12 @@
         "ciudad": "Barcelona",
         "especie": "Conejo",
         "raza": "Mini Rex",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
 
 
@@ -186,7 +225,12 @@
         "ciudad": "Barcelona",
         "especie": "Gato",
         "raza": "Doméstico",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
     {
         "nombre": "Luna",
@@ -198,7 +242,12 @@
         "ciudad": "Valencia",
         "especie": "Gato",
         "raza": "Siamesa",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "vacunado": "Sí",
+        "desparasitado": "No",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
     {
         "nombre": "Gato",
@@ -210,7 +259,12 @@
         "ciudad": "Madrid",
         "especie": "Gato",
         "raza": "Europeo de Pelo Corto",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
     {
         "nombre": "Mia",
@@ -222,7 +276,12 @@
         "ciudad": "Granada",
         "especie": "Gato",
         "raza": "Persa",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "Si",
+        "microchip": "No"
     },
     {
         "nombre": "Oreo",
@@ -234,7 +293,12 @@
         "ciudad": "Sevilla",
         "especie": "Gato",
         "raza": "Bengalí",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "No",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
     {
         "nombre": "Lola",
@@ -246,7 +310,12 @@
         "ciudad": "Barcelona",
         "especie": "Gato",
         "raza": "Ragdoll",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "vacunado": "No",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "No"
     },
     {
         "nombre": "Tom",
@@ -258,7 +327,12 @@
         "ciudad": "Valencia",
         "especie": "Gato",
         "raza": "Maine Coon",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
     {
         "nombre": "Misty",
@@ -270,7 +344,12 @@
         "ciudad": "Madrid",
         "especie": "Gato",
         "raza": "Británico de Pelo Corto",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
     {
         "nombre": "Max",
@@ -282,7 +361,12 @@
         "ciudad": "Granada",
         "especie": "Gato",
         "raza": "Bengalí",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
     {
         "nombre": "Whiskers",
@@ -294,7 +378,12 @@
         "ciudad": "Sevilla",
         "especie": "Gato",
         "raza": "Doméstico",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+        "desparasitado": "No",
+        "sano": "Sí",
+        "esterilizado": "Si",
+        "microchip": "Sí"
     },
     {
         "nombre": "Luna",
@@ -306,7 +395,12 @@
         "ciudad": "Valencia",
         "especie": "Gato",
         "raza": "Sphynx",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "vacunado": "No",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
     {
         "nombre": "Leo",
@@ -318,7 +412,12 @@
         "ciudad": "Barcelona",
         "especie": "Gato",
         "raza": "Ragdoll",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "No"
     },
     {
         "nombre": "Mimi",
@@ -330,7 +429,12 @@
         "ciudad": "Granada",
         "especie": "Gato",
         "raza": "Persa",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "Si",
+        "microchip": "Sí"
     },
     {
         "nombre": "Oliver",
@@ -342,7 +446,12 @@
         "ciudad": "Sevilla",
         "especie": "Gato",
         "raza": "Bengalí",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+    "desparasitado": "Sí",
+    "sano": "Sí",
+    "esterilizado": "No",
+    "microchip": "Sí"
     },
     {
         "nombre": "Cleo",
@@ -354,7 +463,12 @@
         "ciudad": "Madrid",
         "especie": "Gato",
         "raza": "Siamesa",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "vacunado": "Sí",
+        "desparasitado": "Sí",
+        "sano": "Sí",
+        "esterilizado": "No",
+        "microchip": "Sí"
     },
 
 
@@ -369,7 +483,10 @@
         "ciudad": "Madrid",
         "especie": "Hurón",
         "raza": "Doméstico",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+    "desparasitado": "Sí",
+    "sano": "Sí"
     },
     {
         "nombre": "Luna",
@@ -381,7 +498,10 @@
         "ciudad": "Barcelona",
         "especie": "Hurón",
         "raza": "Doméstico",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "vacunado": "Sí",
+    "desparasitado": "Sí",
+    "sano": "Sí"
     },
     {
         "nombre": "Max",
@@ -393,7 +513,10 @@
         "ciudad": "Valencia",
         "especie": "Hurón",
         "raza": "Doméstico",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+    "desparasitado": "Sí",
+    "sano": "Sí"
     },
     {
         "nombre": "Lola",
@@ -405,7 +528,10 @@
         "ciudad": "Sevilla",
         "especie": "Hurón",
         "raza": "Doméstico",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "vacunado": "Sí",
+    "desparasitado": "Sí",
+    "sano": "Sí"
     },
     {
         "nombre": "Leo",
@@ -417,7 +543,10 @@
         "ciudad": "Granada",
         "especie": "Hurón",
         "raza": "Doméstico",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "vacunado": "Sí",
+    "desparasitado": "Sí",
+    "sano": "Sí"
     },
 
 	
@@ -431,7 +560,8 @@
         "ciudad": "Barcelona",
         "especie": "Pájaro",
         "raza": "Periquito Australiano",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "sano": "Sí"
     },
     {
         "nombre": "Lola",
@@ -443,7 +573,8 @@
         "ciudad": "Valencia",
         "especie": "Pájaro",
         "raza": "Cacatúa Ninfa",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "sano": "Sí"
     },
     {
         "nombre": "Pepe",
@@ -455,7 +586,8 @@
         "ciudad": "Madrid",
         "especie": "Pájaro",
         "raza": "Canario",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "sano": "Sí"
     },
     {
         "nombre": "Lucy",
@@ -467,7 +599,8 @@
         "ciudad": "Sevilla",
         "especie": "Pájaro",
         "raza": "Cotorra",
-        "sexo": "Hembra"
+        "sexo": "Hembra",
+        "sano": "Sí"
     },
     {
         "nombre": "Max",
@@ -479,7 +612,8 @@
         "ciudad": "Granada",
         "especie": "Pájaro",
         "raza": "Periquito Inglés",
-        "sexo": "Macho"
+        "sexo": "Macho",
+        "sano": "Sí"
     },
 
         {
@@ -492,7 +626,8 @@
             "ciudad": "Barcelona",
             "especie": "Pájaro",
             "raza": "Canaria",
-            "sexo": "Hembra"
+            "sexo": "Hembra",
+            "sano": "Sí"
         },
         {
             "nombre": "Paco",
@@ -504,7 +639,8 @@
             "ciudad": "Valencia",
             "especie": "Pájaro",
             "raza": "Periquito Ondulado",
-            "sexo": "Macho"
+            "sexo": "Macho",
+            "sano": "Sí"
         },
         {
             "nombre": "Lola",
@@ -516,7 +652,8 @@
             "ciudad": "Madrid",
             "especie": "Pájaro",
             "raza": "Cotorra",
-            "sexo": "Hembra"
+            "sexo": "Hembra",
+            "sano": "Sí"
         },
     
     
@@ -533,7 +670,12 @@
             "ciudad": "Barcelona",
             "especie": "Perro",
             "raza": "Golden Retriever",
-            "sexo": "Macho"
+            "sexo": "Macho",
+            "vacunado": "Si",
+    "desparasitado": "No",
+    "sano": "Sí",
+    "esterilizado": "Si",
+    "microchip": "Si"
         },
         {
             "nombre": "Lola",
@@ -545,7 +687,12 @@
             "ciudad": "Valencia",
             "especie": "Perro",
             "raza": "Mestiza",
-            "sexo": "Hembra"
+            "sexo": "Hembra",
+            "vacunado": "Si",
+    "desparasitado": "No",
+    "sano": "Sí",
+    "esterilizado": "No",
+    "microchip": "Si"
         },
         {
             "nombre": "Rocky",
