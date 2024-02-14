@@ -28,6 +28,8 @@ const animalSchema = new mongoose.Schema({
 
   peso: { type: Number, required: true, trim: true },
 
+  tamaño: {type: String, required: false, trim:true},
+
   nacimiento: { type: String, required: true, trim: true },
 
   historia: { type: String, required: true, trim: true },
