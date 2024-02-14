@@ -57,7 +57,7 @@ const animalSchema = new mongoose.Schema({
 {timeStamps:true}
 )
 
-const Animals = mongoose.model('Animals', animalSchema)
+const Animal = mongoose.model('animal', animalSchema)
 
-module.exports=Animals;
+module.exports=Animal;
 

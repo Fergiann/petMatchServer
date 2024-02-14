@@ -1,9 +1,9 @@
 const mongoose = require("mongoose")
-const Animals = require("../models/animals.models")
+const Animal = require("../models/animals.models")
+require("dotenv").config();
 
 const arrayAnimals = [
   {
-    "_id": "65cb4548a28256dd78688272",
     "nombre": "Scorpius",
     "imagen": "https://m.media-amazon.com/images/I/61Z3evXhdEL.jpg",
     "personalidad": ["Sigiloso", "Agresivo", "Cauteloso"],
@@ -22,7 +22,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688273",
     "nombre": "Aranea",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Lycosa_erythrognatha_%28Ara%C3%B1a_Lobo_de_Vientre_Negro%29.jpg",
     "personalidad": ["Sigilosa", "Cazadora", "Reservada"],
@@ -41,7 +40,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688274",
     "nombre": "Venom",
     "imagen": "https://static.nationalgeographicla.com/files/styles/image_3200/public/nationalgeographic2204210.jpg?w=1900&h=1265.jpg",
     "personalidad": ["Agresivo", "Veneno letal", "Solitario"],
@@ -60,7 +58,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688275",
     "nombre": "Silk",
     "imagen": "https://d7lju56vlbdri.cloudfront.net/var/ezwebin_site/storage/images/noticias/las-propiedades-de-la-seda-de-arana-se-conservan-desde-hace-230-millones-de-anos/5631471-1-esl-MX/Las-propiedades-de-la-seda-de-arana-se-conservan-desde-hace-230-millones-de-anos.jpg",
     "personalidad": ["Pacífica", "Tejedora", "Reservada"],
@@ -79,7 +76,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688276",
     "nombre": "Fang",
     "imagen": "https://www.latercera.com/resizer/noeSkp57DJsQnpKL47NRSkV_KFM=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/KCUMBDWWNVEJ3L27ZHJTOUAT2E.jpg",
     "personalidad": ["Sigilosa", "Depredadora", "Rápida"],
@@ -98,7 +94,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd78688277",
     "nombre": "Venom",
     "imagen": "https://grupovierci.brightspotcdn.com/dims4/default/45edb3c/2147483647/strip/true/crop/1446x813+0+8/resize/1440x810!/quality/90/?url=https%3A%2F%2Fk2-prod-grupo-vierci.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fadjuntos%2F161%2Fimagenes%2F009%2F543%2F0009543280.jpg",
     "personalidad": ["Sigiloso", "Veneno letal", "Cazador"],
@@ -117,7 +112,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688278",
     "nombre": "Arachne",
     "imagen": "https://static.nationalgeographic.es/files/styles/image_3200/public/02malespider.jpg?w=760&h=507.jpg",
     "personalidad": ["Cautelosa", "Tejedora", "Reservada"],
@@ -136,7 +130,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688279",
     "nombre": "Nyx",
     "imagen": "https://afotoledo.com/media/kunena/attachments/375/_MG_8732.jpg",
     "personalidad": ["Solitario", "Nocturno", "Sigiloso"],
@@ -155,7 +148,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868827a",
     "nombre": "Bugs",
     "imagen": "https://t1.ea.ltmcdn.com/es/posts/6/8/0/razas_de_conejos_enanos_o_toy_24086_600.jpg",
     "personalidad": ["Curioso", "Travieso", "Energético"],
@@ -174,7 +166,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd7868827b",
     "nombre": "Luna",
     "imagen": "https://cadenaser.com/resizer/iPUbDMS9gothiYxFAIaYfwLnPgY=/1200x900/filters:format(jpg):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/KGKTBWWDXRMKJBICPP3XW2OCWE.jpg",
     "personalidad": ["Dulce", "Tranquila", "Curiosa"],
@@ -193,7 +184,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868827c",
     "nombre": "Floppy",
     "imagen": "https://t2.ea.ltmcdn.com/es/razas/5/9/4/belier_495_0_orig.jpg",
     "personalidad": ["Juguetón", "Amigable", "Curioso"],
@@ -212,7 +202,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd7868827d",
     "nombre": "Coco",
     "imagen": "https://estaticos-cdn.prensaiberica.es/clip/6ef3039c-c555-4247-871f-c25b90d81f56_alta-libre-aspect-ratio_default_0.jpg",
     "personalidad": ["Cariñoso", "Tranquilo", "Curioso"],
@@ -231,7 +220,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868827e",
     "nombre": "Bella",
     "imagen": "https://conejosenanossiero.com/wp-content/uploads/2021/05/IMG_9295-min.jpg",
     "personalidad": ["Dulce", "Tímida", "Curiosa"],
@@ -250,7 +238,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd7868827f",
     "nombre": "Oreo",
     "imagen": "https://www.conejos.wiki/Imagenes/raza-de-conejo-mini-rex.jpg",
     "personalidad": ["Juguetón", "Curioso", "Energético"],
@@ -269,7 +256,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688280",
     "nombre": "Simba",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/49/Gato_Domestico.jpg",
     "personalidad": ["Mimoso", "Juguetón", "Curioso"],
@@ -289,7 +275,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688281",
     "nombre": "Luna",
     "imagen": "https://www.elmueble.com/medio/2022/07/17/gato-siames_8d2b717e_1280x853.jpg",
     "personalidad": ["Cariñosa", "Traviesa", "Curiosa"],
@@ -309,7 +294,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688282",
     "nombre": "Gato",
     "imagen": "https://soydegatos.com/wp-content/uploads/2022/09/gato-europeo-de-pelo-corto.jpg",
     "personalidad": ["Curioso", "Tranquilo", "Independiente"],
@@ -329,7 +313,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688283",
     "nombre": "Mia",
     "imagen": "https://miminino.es/wp-content/uploads/2023/09/raza-gato-persa.jpg",
     "personalidad": ["Cariñosa", "Juguetona", "Inteligente"],
@@ -349,7 +332,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688284",
     "nombre": "Oreo",
     "imagen": "https://www.tiendanimal.es/articulos/wp-content/uploads/2020/04/gato-bengali-1200x900.jpg",
     "personalidad": ["Juguetón", "Curioso", "Amigable"],
@@ -369,7 +351,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688285",
     "nombre": "Lola",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ragdoll_from_Gatil_Ragbelas.jpg/640px-Ragdoll_from_Gatil_Ragbelas.jpg",
     "personalidad": ["Dulce", "Tranquila", "Cariñosa"],
@@ -389,7 +370,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd78688286",
     "nombre": "Tom",
     "imagen": "https://www.mistermascotas.com.mx/cdn/shop/articles/1_ba30fe2b-1dd9-498b-948f-6ca59ca36dbc.jpg?v=1648170482.jpg",
     "personalidad": ["Travieso", "Juguetón", "Curioso"],
@@ -409,7 +389,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688287",
     "nombre": "Misty",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/British_shorthair_Irina_AEA.JPG/1200px-British_shorthair_Irina_AEA.JPG",
     "personalidad": ["Cariñosa", "Tímida", "Leal"],
@@ -429,7 +408,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd78688288",
     "nombre": "Max",
     "imagen": "https://es.mypet.com/wp-content/uploads/sites/23/2022/04/ES_2022_CABU_CABU_POST_BLOG_NLDAZ-_GATO-BENGALI_ABR22_TKF_1-scaled-1.jpg",
     "personalidad": ["Curioso", "Energético", "Independiente"],
@@ -449,7 +427,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688289",
     "nombre": "Whiskers",
     "imagen": "https://www.nationalgeographic.com.es/medio/2022/11/17/el-gato-salvaje-africano-mas-pequeno-y-esbelto-que-su-pariente-europeo-es-el-antepasado-de-los-actuales-gatos-domesticos_4cb26d2a_1200x630.jpg",
     "personalidad": ["Tranquilo", "Cariñoso", "Juguetón"],
@@ -469,7 +446,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868828a",
     "nombre": "Luna",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Gato_Sphynx.jpg/2560px-Gato_Sphynx.jpg",
     "personalidad": ["Curiosa", "Elegante", "Leal"],
@@ -489,7 +465,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868828b",
     "nombre": "Leo",
     "imagen": "https://0d2ujxjiqkxw.cdn.shift8web.com/wp-content/uploads/RAGDOLL-1.jpg",
     "personalidad": ["Energético", "Juguetón", "Cariñoso"],
@@ -509,7 +484,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868828c",
     "nombre": "Mimi",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/GatoPersa.jpg/2560px-GatoPersa.jpg",
     "personalidad": ["Dulce", "Tranquila", "Cariñosa"],
@@ -529,7 +503,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868828d",
     "nombre": "Oliver",
     "imagen": "https://images.hola.com/imagenes/mascotas/20211122200014/razas-gatos-bengali-inteligente-docil-dn/1-22-390/gato-bengali-raza-leopardo-manso-t.jpg",
     "personalidad": ["Curioso", "Juguetón", "Inteligente"],
@@ -549,7 +522,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868828e",
     "nombre": "Cleo",
     "imagen": "https://clinicaveterinarium.es/wp-content/uploads/2023/11/lindo-gatito-gato-siames-interior.jpg",
     "personalidad": ["Tímida", "Cariñosa", "Leal"],
@@ -569,7 +541,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868828f",
     "nombre": "Coco",
     "imagen": "https://img.freepik.com/fotos-premium/huron-domestico-pelirrojo-camina-correa-cesped_420054-1669.jpg",
     "personalidad": ["Juguetón", "Curioso", "Energético"],
@@ -588,7 +559,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd78688290",
     "nombre": "Luna",
     "imagen": "https://www.acws.cl/wp-content/uploads/2017/11/todolodehuron-1-2000x1000.jpg",
     "personalidad": ["Cariñosa", "Juguetona", "Curiosa"],
@@ -607,7 +577,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688291",
     "nombre": "Max",
     "imagen": "https://images.hive.blog/0x0/https://cdn.steemitimages.com/DQmXbBpEj2qQXDZrtmmR3oKRyWL7yGMaN3ffxgTmK7is8L7/Hur%C3%B3n-dom%C3%A9stico.jpg",
     "personalidad": ["Travieso", "Energético", "Curioso"],
@@ -626,7 +595,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688292",
     "nombre": "Lola",
     "imagen": "https://clinicacanis.com/wp-content/uploads/el-huron-como-mascota.jpg",
     "personalidad": ["Cariñosa", "Juguetona", "Curiosa"],
@@ -645,7 +613,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688293",
     "nombre": "Leo",
     "imagen": "https://www.tiendanimal.es/articulos/wp-content/uploads/2019/11/hurones-las-mejores-mascotas.jpg",
     "personalidad": ["Elegante", "Juguetón", "Curioso"],
@@ -664,7 +631,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688294",
     "nombre": "Paco",
     "imagen": "https://avesexoticas.org/wp-content/uploads/2017/08/PERICOS-AUSTRALIANOS-3000x1998.jpg",
     "personalidad": ["Cantador", "Sociable", "Curioso"],
@@ -683,7 +649,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688295",
     "nombre": "Lola",
     "imagen": "https://www.webconsultas.com/sites/default/files/styles/wch_image_schema/public/temas/cacatua_ninfa_p.jpg",
     "personalidad": ["Traviesa", "Inquisitiva", "Energética"],
@@ -702,7 +667,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd78688296",
     "nombre": "Pepe",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Serinus_canaria_gelb.JPG",
     "personalidad": ["Sociable", "Carismático", "Juguetón"],
@@ -721,7 +685,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688297",
     "nombre": "Lucy",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/9/90/COTORRA_Myiopsitta_monachus.jpg",
     "personalidad": ["Tranquila", "Observadora", "Cariñosa"],
@@ -740,7 +703,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688298",
     "nombre": "Max",
     "imagen": "https://animaliavigo.com/images/virtuemart/product/img_3295a.jpg",
     "personalidad": ["Curioso", "Inquieto", "Inteligente"],
@@ -759,7 +721,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd78688299",
     "nombre": "Pepita",
     "imagen": "https://www.autopista.es/uploads/s1/10/86/05/52/una-de-las-caracteristicas-de-los-pajaros-canarios-es-su-color-amarillo-aunque-tambien-existen-de-otros-tonos.jpeg",
     "personalidad": ["Dulce", "Juguetona", "Curiosa"],
@@ -778,7 +739,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868829a",
     "nombre": "Paco",
     "imagen": "https://www.vetcon.es/wp-content/uploads/2023/02/alimentacion-periquito-australiano.jpg",
     "personalidad": ["Sociable", "Cantador", "Curioso"],
@@ -797,7 +757,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868829b",
     "nombre": "Lola",
     "imagen": "https://d7lju56vlbdri.cloudfront.net/var/ezwebin_site/storage/images/noticias/la-cotorra-argentina-primer-animal-no-humano-con-una-huella-vocal-por-individuo/11123954-5-esl-MX/La-cotorra-argentina-primer-animal-no-humano-con-una-huella-vocal-por-individuo.jpg",
     "personalidad": ["Curiosa", "Alegre", "Inquieta"],
@@ -816,7 +775,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868829c",
     "nombre": "Buddy",
     "imagen": "https://www.mismascotas.es/modules/ph_simpleblog/covers/47.jpg",
     "personalidad": ["Carismático", "Energético", "Leal"],
@@ -836,7 +794,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd7868829d",
     "nombre": "Lola",
     "imagen": "https://purina.com.mx/sites/default/files/styles/webp/public/2022-10/purina-brand-perros-mestizos-amor-y-responsabilidad-nota-01.jpg.webp?itok=TKVtKRS6",
     "personalidad": ["Dulce", "Juguetona", "Protectora"],
@@ -856,7 +813,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd7868829e",
     "nombre": "Rocky",
     "imagen": "https://koalamascotas.com/modules/ph_simpleblog/covers/14.jpg",
     "personalidad": ["Valiente", "Inteligente", "Energético"],
@@ -876,7 +832,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd7868829f",
     "nombre": "Daisy",
     "imagen": "https://images.unsplash.com/photo-1619276511528-f397bf25e13d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGxhYnJhZG9yJTIwcmV0cmlldmVyfGVufDB8fDB8fHww",
     "personalidad": ["Amigable", "Juguetona", "Leal"],
@@ -896,7 +851,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882a0",
     "nombre": "Thor",
     "imagen": "https://t1.ea.ltmcdn.com/es/posts/8/0/0/ejercicio_de_un_pastor_aleman_21008_orig.jpg",
     "personalidad": ["Fuerte", "Protector", "Leal"],
@@ -916,7 +870,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882a1",
     "nombre": "Bella",
     "imagen": "https://www.dailypaws.com/thmb/DQfQglzyKWlVSlsDwKPprF2iMSg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/golden-retriever-177213599-2000-a30830f4d2b24635a5d01b3c5c64b9ef.jpg",
     "personalidad": ["Dulce", "Carismática", "Juguetona"],
@@ -936,7 +889,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882a2",
     "nombre": "Max",
     "imagen": "https://cdn.nubika.es/wp-content/uploads/2021/06/como-adiestrar-beagle.jpg",
     "personalidad": ["Energético", "Amigable", "Curioso"],
@@ -956,7 +908,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882a3",
     "nombre": "Luna",
     "imagen": "https://media.graphassets.com/resize=height:404,width:1280/output=format:webp/6SgMwjwS7iPLJtkoqVwf?width=1280",
     "personalidad": ["Cariñosa", "Juguetona", "Inteligente"],
@@ -976,7 +927,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882a4",
     "nombre": "Charlie",
     "imagen": "https://www.hogarmania.com/archivos/202302/cocker-spaniel-2-XxXx80.jpg",
     "personalidad": ["Amigable", "Divertido", "Curioso"],
@@ -996,7 +946,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd786882a5",
     "nombre": "Molly",
     "imagen": "https://t2.uc.ltmcdn.com/es/posts/3/9/8/como_educar_a_un_pug_45893_600.jpg",
     "personalidad": ["Leal", "Carismática", "Protectora"],
@@ -1016,7 +965,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882a6",
     "nombre": "Oscar",
     "imagen": "https://www.kiwoko.com/blogmundoanimal/wp-content/uploads/2017/04/Caracteristicas-del-Labrador-Retriever.jpg",
     "personalidad": ["Divertido", "Juguetón", "Inteligente"],
@@ -1036,7 +984,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882a7",
     "nombre": "Lucy",
     "imagen": "https://media.graphassets.com/output=format:webp/KHpTY4nvQMiNxkgNcfNm",
     "personalidad": ["Dulce", "Cariñosa", "Leal"],
@@ -1056,7 +1003,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882a8",
     "nombre": "Bruno",
     "imagen": "https://www.eltiempo.com/files/article_main_1200/uploads/2023/04/05/642daa1edf8de.png",
     "personalidad": ["Energético", "Valiente", "Leal"],
@@ -1076,7 +1022,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882a9",
     "nombre": "Mia",
     "imagen": "https://www.aon.es/personales/seguro-perro-gato/wp-content/uploads/sites/2/2021/06/pastor-aleman-3.jpg",
     "personalidad": ["Cariñosa", "Juguetona", "Leal"],
@@ -1096,7 +1041,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882aa",
     "nombre": "Rocky",
     "imagen": "https://mivet.com/hubfs/shutterstock_590291273.jpg",
     "personalidad": ["Fuerte", "Protector", "Valiente"],
@@ -1116,7 +1060,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd786882ab",
     "nombre": "Bella",
     "imagen": "https://www.mibichon.com/wp-content/uploads/2021/02/Disen%CC%83o-sin-ti%CC%81tulo-6.png",
     "personalidad": ["Dulce", "Carismática", "Juguetona"],
@@ -1136,7 +1079,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882ac",
     "nombre": "Duke",
     "imagen": "https://blog-static.petlove.com.br/wp-content/uploads/2018/04/husky.png",
     "personalidad": ["Energético", "Juguetón", "Leal"],
@@ -1156,7 +1098,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882ad",
     "nombre": "Sophie",
     "imagen": "https://media.graphassets.com/output=format:webp/kt2NjkRKTCqfd1VQAyE9",
     "personalidad": ["Cariñosa", "Amigable", "Leal"],
@@ -1176,7 +1117,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882ae",
     "nombre": "Buddy",
     "imagen": "https://media.graphassets.com/resize=height:404,width:1280/output=format:webp/q06KGK0iTWisxHi7Pgoj?width=1280",
     "personalidad": ["Amigable", "Cariñoso", "Leal"],
@@ -1196,7 +1136,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882af",
     "nombre": "Molly",
     "imagen": "https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/27073/82f94a89b16e5bafdef7b8f27a0b342f79836670/original/7384c148-4e0e-4d00-823f-731e404c010b.jpeg/!!/b%3AW1sicmVzaXplIiwxODAwXSxbIm1heCJdLFsid2UiXV0%3D/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg",
     "personalidad": ["Dulce", "Amigable", "Leal"],
@@ -1216,7 +1155,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882b0",
     "nombre": "Charlie",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Labrador_on_Quantock_%282175262184%29.jpg/800px-Labrador_on_Quantock_%282175262184%29.jpg",
     "personalidad": ["Divertido", "Juguetón", "Amigable"],
@@ -1236,7 +1174,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882b1",
     "nombre": "Luna",
     "imagen": "https://pamipe.com/wiki/wp-content/uploads/2022/09/Chihuahua.png",
     "personalidad": ["Cariñosa", "Dulce", "Leal"],
@@ -1256,7 +1193,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882b2",
     "nombre": "Rex",
     "imagen": "https://static.nationalgeographic.es/files/styles/image_3200/public/03-iguana-shot-arrows.jpg?w=1600",
     "personalidad": ["Curioso", "Activo", "Agresivo"],
@@ -1275,7 +1211,6 @@ const arrayAnimals = [
     "adoptado": true
   },
   {
-    "_id": "65cb4548a28256dd786882b3",
     "nombre": "Zara",
     "imagen": "https://tonyvivanco.files.wordpress.com/2011/09/dsc03362.jpg",
     "personalidad": ["Tranquila", "Reservada", "Observadora"],
@@ -1294,7 +1229,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882b4",
     "nombre": "Spike",
     "imagen": "https://images.hola.com/imagenes/mascotas/20220708213347/dragon-barbudo-una-iguana-docil-y-mas-pequena-dn/1-112-722/como-es-dragon-barbudo-una-iguana-docil-y-mas-pequena-t.jpg",
     "personalidad": ["Energético", "Juguetón", "Curioso"],
@@ -1313,7 +1247,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882b5",
     "nombre": "Medusa",
     "imagen": "https://img.europapress.es/fotoweb/fotonoticia_20200217170857_1200.jpg",
     "personalidad": ["Sigilosa", "Veneno letal", "Solitaria"],
@@ -1332,7 +1265,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882b6",
     "nombre": "Spike",
     "imagen": "https://tn.com.ar/resizer/idh7vGzOFNH9vVVclhQe7iik6Qw=/767x0/smart/filters:format(webp)/cloudfront-us-east-1.images.arcpublishing.com/artear/KH473J5TC5GOFLGFSYK7YIVSQY.png",
     "personalidad": ["Curioso", "Activo", "Agresivo"],
@@ -1351,7 +1283,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882b7",
     "nombre": "Naga",
     "imagen": "https://mascotas.net/wp-content/uploads/2014/04/tortuga-e1397598995329.jpg",
     "personalidad": ["Curiosa", "Inquieta", "Energética"],
@@ -1370,7 +1301,6 @@ const arrayAnimals = [
     "adoptado": false
   },
   {
-    "_id": "65cb4548a28256dd786882b8",
     "nombre": "Draco",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Eublepharis_macularius_01.jpg/640px-Eublepharis_macularius_01.jpg",
     "personalidad": ["Curioso", "Activo", "Inteligente"],
@@ -1392,17 +1322,17 @@ const arrayAnimals = [
 
   mongoose.connect(process.env.MONGO_URI)
   .then(async () => {
-    const allAnimals = await Animals.find();
+    const allAnimals = await Animal.find();
     if(allAnimals > 0){
-        await Animals.collection.drop();
+        await Animal.collection.drop();
         console.log(" Animales borrados");
     }
   })
 
 .catch((error) => console.log("error al borrar Animales", error))
 .then(async () => {
-const animalesMap = arrayAnimals.map((animals)=> new Animals(animals));
-await Animals.insertMany(animalesMap);
+const animalesMap = arrayAnimals.map((animal)=> new Animal(animal));
+await Animal.insertMany(animalesMap);
 console.log("Animales insertados correctamente");
 
 })

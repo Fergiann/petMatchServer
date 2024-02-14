@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
 const Noticias = require("../models/noticias.models")
+require("dotenv").config();
 
 const arrayNoticias = [
     
