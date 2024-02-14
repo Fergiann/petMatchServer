@@ -18,7 +18,7 @@ connectMongo();
 
 const app = express();
 
-app.use(express.json());
+
 app.use(mongoSanitize());
 app.use(cors(corsOptions));
 app.use((req, res, next) => {

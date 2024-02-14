@@ -1,11 +1,11 @@
-const Animals = require('../models/animals.models');
+const Animal = require('../models/animals.models');
 const HTTPSTATUSCODE = require("../../utils/httpStatusCode");
  
 // get all
 const getAnimals = async (request, response) => {
     try {
         console.log(response)
-        const animals = await Animals.find();
+        const animals = await Animal.find();
         response.status(200).json(animals);
         
  
@@ -18,8 +18,10 @@ const getAnimals = async (request, response) => {
 // get 1
 const getAnimal = async (request, response) => {
     try {
-        const id = request.params.id;
-        const animal = await Animals.findById(id);
+        const { id }  = request.params;
+        const animal = await Animal.findById(id);
+      
+        console.log(animal);
         response.status(200).json({
             status: 200,
             message: HTTPSTATUSCODE[200],
@@ -33,7 +35,7 @@ const getAnimal = async (request, response) => {
  
 // post
 const createAnimal = async (request, response) => {
-    const animal = new Animals(request.body);
+    const animal = new Animal(request.body);
     try {
         await animal.save();
         response.status(201).json({
@@ -51,9 +53,9 @@ const createAnimal = async (request, response) => {
 const updateAnimal = async (request, response) => {
     try {
         const {id}= request.params;
-        const body = new Animals(request.body);
+        const body = new Animal(request.body);
         body._id = id    
-        const animal = await Animals.findByIdAndUpdate(id, body, {new: true});
+        const animal = await Animal.findByIdAndUpdate(id, body, {new: true});
         if (!animal) {
             return response.status(404).json({ 
                 status: 404,
@@ -77,7 +79,7 @@ const updateAnimal = async (request, response) => {
 const deleteAnimal = async (request, response) => {
     try {
         const id = request.params.id;
-        const animal = await Animals.findByIdAndDelete(id);
+        const animal = await Animal.findByIdAndDelete(id);
 
         if (!animal) {
             return response.status(404).json({ message: 'Animal no encontrada' });
