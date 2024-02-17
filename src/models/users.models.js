@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema(
 
     apellidos: { type: String, required: true, trim: true },
 
-    misAnimales: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: "animal"}],
+    misAnimales: [{ type: mongoose.Schema.Types.ObjectId, required: false, ref: "animal"}],
 
     image: { type: String, required: true, trim: true },
 

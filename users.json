@@ -1,12 +1,9 @@
 [{
-"name": "Yoel",
-"surname": "Rodriguez",
-"pets":[{"nombreMascota": "Bella", "especie": "perro "}],
-"image" : "https://media.licdn.com/dms/image/D4D35AQGKMzxV5VjYlQ/profile-framedphoto-shrink_400_400/0/1706716561537?e=1708689600&v=beta&t=kyQWUHN0SujR2ZW7v5gWGX9xtTOis5rcuYSu8sEkEPQ"
-
-
-
-
-
-
-}]
+    "nombre": "Yoel",
+    "apellidos": "Rodriguez",
+    "misAnimales": ["65ccce9425aa66143af122da"],
+    "image": "https://media.licdn.com/dms/image/D4D35AQGKMzxV5VjYlQ/profile-framedphoto-shrink_400_400/0/1706716561537?e=1708689600&v=beta&t=kyQWUHN0SujR2ZW7v5gWGX9xtTOis5rcuYSu8sEkEPQ", 
+    "mail": "joel@mail.com", 
+    "password": "12345678", 
+    "role": "user"
+    }]
