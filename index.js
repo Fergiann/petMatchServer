@@ -7,7 +7,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const HTTPSTATUSCODE = require("./utils/httpStatusCode");
 const connectMongo = require("./utils/db");
 const corsOptions = {
-  origin: "http://127.0.0.1:5500",
+  origin: "*",
 };
 
 require("dotenv").config();

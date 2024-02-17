@@ -54,7 +54,7 @@ const animalSchema = new mongoose.Schema({
 
   adoptado: { type: Boolean, required: false, trim: true },
 
-  estadoAdoptado: { type: String, required: false, trim: true },
+  estadoAdopcion: { type: String, required: false, trim: true },
 
 },
 {timeStamps:true}
