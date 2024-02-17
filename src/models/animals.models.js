@@ -53,6 +53,9 @@ const animalSchema = new mongoose.Schema({
   microchip: { type: Boolean, required: false, trim: true },
 
   adoptado: { type: Boolean, required: false, trim: true },
+
+  estadoAdoptado: { type: String, required: false, trim: true },
+
 },
 {timeStamps:true}
 )

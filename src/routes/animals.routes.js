@@ -12,4 +12,3 @@ animalRouter.delete("/:id",  deleteAnimal);
 
 module.exports = animalRouter;
 
-//Esto es un comentario

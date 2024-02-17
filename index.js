@@ -2,22 +2,21 @@ const express = require("express");
 
 const cors = require("cors");
 
-const mongoSanitize = require('express-mongo-sanitize');
+const mongoSanitize = require("express-mongo-sanitize");
 
-const HTTPSTATUSCODE = require('./utils/httpStatusCode');
+const HTTPSTATUSCODE = require("./utils/httpStatusCode");
 const connectMongo = require("./utils/db");
 const corsOptions = {
-  origin: 'http://127.0.0.1:5500',
+  origin: "http://127.0.0.1:5500",
 };
 
 require("dotenv").config();
-
+const usersRouter = require("./src/routes/users.routes")
 const animalRouter = require("./src/routes/animals.routes");
-const noticiasRouter = require("./src/routes/noticias.routes")
+const noticiasRouter = require("./src/routes/noticias.routes");
 connectMongo();
 
 const app = express();
-
 
 app.use(mongoSanitize());
 app.use(cors(corsOptions));
@@ -28,10 +27,12 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors({
-  origin: "*",
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: "*",
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -40,6 +41,7 @@ app.set("secretKey", "nodeRestApi");
 
 app.use("/animals", animalRouter);
 app.use("/noticias", noticiasRouter);
+app.use("/user", usersRouter);
 
 app.get("/", (request, response) => {
   response.status(200).json({
