@@ -19,7 +19,7 @@ const arrayUsers = [
     "nombre": "Guillermo",
     "apellidos": "Torrres",
     "misAnimales": [],
-    "image": "https://media.licdn.com/dms/image/D4D35AQGKMzxV5VjYlQ/profile-framedphoto-shrink_400_400/0/1706716561537?e=1708689600&v=beta&t=kyQWUHN0SujR2ZW7v5gWGX9xtTOis5rcuYSu8sEkEPQ", 
+    "image": "https://cdn.discordapp.com/attachments/1186681389999988816/1208725459018448939/image.png?ex=65e4544e&is=65d1df4e&hm=fc4bfd0802b76c3bd8b95087bd203bf93ec4ec6bfbb94d69dfabeed7ac747353&", 
     "mail": "guille@mail.com", 
     "password": "12345678", 
     "role": "user"   
