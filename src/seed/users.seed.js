@@ -1,4 +1,11 @@
-[{
+const mongoose = require("mongoose")
+const Animal = require("../models/users.models");
+const User = require("../models/users.models");
+require("dotenv").config();
+
+const arrayUsers = [
+    
+    {
     "nombre": "Yoel",
     "apellidos": "Rodriguez",
     "misAnimales": [],
@@ -50,3 +57,23 @@
 
 
 ]
+
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(async () => {
+    const allUsers = await Users.find();
+    if(allUsers > 0){
+        await User.collection.drop();
+        console.log(" Usuarios borrados");
+    }
+  })
+
+.catch((error) => console.log("error al borrar usuarios", error))
+.then(async () => {
+const usersMap = arrayUsers.map((user)=> new Animal(user));
+await User.insertMany(usersMap);
+console.log("Usuarios insertados correctamente");
+
+})
+.catch((error) => console.log("error al insertar Usuarios", error))
+.finally(()=> mongoose.disconnect());
