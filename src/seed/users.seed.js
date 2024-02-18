@@ -61,7 +61,7 @@ const arrayUsers = [
 
 mongoose.connect(process.env.MONGO_URI)
   .then(async () => {
-    const allUsers = await Users.find();
+    const allUsers = await User.find();
     if(allUsers > 0){
         await User.collection.drop();
         console.log(" Usuarios borrados");
