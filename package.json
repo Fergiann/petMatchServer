@@ -8,7 +8,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "seed-animal": "node ./src/seed/petMatch.Seed.js",
-    "seed-noticias": "node ./src/seed/noticias.Seed.js"
+    "seed-noticias": "node ./src/seed/noticias.Seed.js",
+    "seed-user": "node ./src/seed/users.seed.js"
   },
   "keywords": [],
   "author": "",
