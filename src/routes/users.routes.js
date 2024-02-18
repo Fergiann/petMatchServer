@@ -1,13 +1,13 @@
-const express = require("express")
-
-const usersRouter = express.Router();
-const { getUsers, getUser, createUser, updateUser, deleteUser} = require("../controllers/users.controllers");
+const express = require('express');
+const userRouter = express.Router();
+const { createUser, authenticate, logout, getUsers } = require("../controllers/users.controllers");
 const { isAuth } = require("../middlewares/auth.middleware");
 
-usersRouter.get("/", getUsers );
-usersRouter.get("/:id", getUser );
-usersRouter.post("/",  createUser);
-usersRouter.patch("/:id", updateUser);
-usersRouter.delete("/:id",  deleteUser);
 
-module.exports = usersRouter;
+userRouter.post("/register", createUser);
+userRouter.post("/authenticate", authenticate);
+userRouter.post("/logout", [isAuth], logout);
+userRouter.get("/", [isAuth], getUsers);
+
+
+module.exports =  userRouter; 
