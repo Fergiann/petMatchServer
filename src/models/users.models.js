@@ -5,23 +5,10 @@ const salt = 10;
 
 const userSchema = new mongoose.Schema(
   {
-    nombre: { type: String, required: true, trim: true },
-
-    apellidos: { type: String, required: true, trim: true },
-
-    misAnimales: [{ type: mongoose.Schema.Types.ObjectId, required: false, ref: "animal"}],
-
-    image: { type: String, required: true, trim: true },
-
-    mail: { type: String, required: true, trim: true },
-
+    nombreUsuario: { type: String, unique:true, required: true, trim: true },
     password: { type: String, required: true, trim: true },
 
-    role: {
-      type: String,
-      default: "user",
-      enum: ["admin", "user", "moderator"],
-    },
+  
   },
   { timeStamps: true }
 );

@@ -7,7 +7,7 @@ const { isAuth } = require("../middlewares/auth.middleware");
 userRouter.post("/register", createUser);
 userRouter.post("/authenticate", authenticate);
 userRouter.post("/logout", [isAuth], logout);
-userRouter.get("/", [isAuth], getUsers);
+userRouter.get("/", getUsers);
 
 
 module.exports =  userRouter; 
