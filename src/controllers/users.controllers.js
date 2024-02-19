@@ -6,14 +6,15 @@ const HTTPSTATUSCODE = require("../../utils/httpStatusCode");
 const createUser = async (request, response, next) => {
   try {
     const user = new User();
-    user.name = request.body.name;
+    user.nombreUsuario = request.body.nombreUsuario;
+   
     
     // Hash de la contraseña antes de guardarla en la base de datos
     const saltRounds = 10;  // Número de rondas para generar el salt
     user.password = await bcrypt.hash(request.body.password, saltRounds);
 
-    // Verificar si ya existe el usuario
-    if (await User.findOne({ name: request.body.name })) {
+    //Verificar si ya existe el usuario
+    if (await User.findOne({ nombreUsuario: request.body.nombreUsuario })) {
       return response.status(409).json({
         status: 409,
         message: HTTPSTATUSCODE[409],
@@ -36,13 +37,13 @@ const createUser = async (request, response, next) => {
 
 const authenticate = async (request, response, next) => {
   try {
-    const userInfo = await User.findOne({ name: request.body.name });
+    const userInfo = await User.findOne({ nombreUsuario: request.body.nombreUsuario });
     if (userInfo && bcrypt.compareSync(request.body.password, userInfo.password)) {
       userInfo.password = null;
       const token = jwt.sign(
         {
           id: userInfo._id,
-          name: userInfo.name,
+          nombreUsuario: userInfo.nombreUsuario,
         },
         request.app.get("secretKey"),
         { expiresIn: "1d" }
